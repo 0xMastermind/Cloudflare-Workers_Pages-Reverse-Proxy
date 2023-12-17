@@ -16,7 +16,7 @@ export default {
         // 主要的请求处理逻辑
         async function handleRequest(request) {
             let url = new URL(request.url);
-            url.hostname = 'hostloc.com';
+            url.hostname = 'example.com';
             url.protocol = 'https:';
 
             let newRequestHeaders = new Headers(request.headers);
@@ -39,7 +39,7 @@ export default {
 
                 if (response.headers.get('Content-Type')?.includes('text')) {
                     let text = await response.text();
-                    text = text.replace(/hostloc.com/g, 'test.iwanttogohome.workers.dev');
+                    text = text.replace(/hostloc.com/g, 'example.com');
 
                     return new Response(text, {
                         status: response.status,
