@@ -12,7 +12,7 @@ export default {
 
     // 构建新的请求 URL
     let url = new URL(request.url);
-    url.hostname = 'example.com';
+    url.hostname = 'www.example.com';
     url.protocol = 'https:';
 
     // 构建新的请求头
@@ -37,7 +37,7 @@ export default {
       // 对文本内容进行处理
       if (response.headers.get('Content-Type')?.includes('text')) {
         let text = await response.text();
-        text = text.replace(/hostloc.com/g, 'example.com');
+        text = text.replace(/www.example.com/g, 'Proxy.example.com');
 
         return new Response(text, {
           status: response.status,
