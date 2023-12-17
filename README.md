@@ -1,7 +1,7 @@
 # Cloudflare-Workers_Pages-Reverse-Proxy
 利用Cloudflare Workers&Pages 反向代理Web网页
 
-# 1. Create a worker
+# 1. Create a worker & Pages
 From the root of the Cloudflare dashboard, go to "Workers & Pages" > "Overview" > "Create application" > "Create Worker". At this point, you can either keep the random worker name or choose your own. Click "Deploy" once done.
 
 # 2. Configure the worker to act as a proxy
